@@ -1,0 +1,56 @@
+import videoJuego.*
+
+
+test "Las consolas entiendan jugabilidad() " {
+  assert.equals(10, play.jugabilidad())
+  assert.equals(8, portatil.jugabilidad())
+}
+
+
+test "Las consolas entiendan  mensaje usar()" {
+assert.equals(1, play.usar())
+assert.equals(1, portatil.usar())
+}
+
+
+test "delfina entiende agarrar(consola)" {
+ 
+  assert.equals(play, delfina.agarrar(play))
+  assert.equals(portatil, delfina.agarrar(portatil))
+}
+
+test "delfina entiende jugar(arkanoid)." {
+
+delfina.agarrar(play)
+
+delfina.jugar(arkanoid)
+assert.equals(50, delfina.divertida())
+  
+}
+
+test"delfina entiende jugar(mario)"{
+	
+	delfina.agarrar(play)
+	
+delfina.jugar(mario)
+assert.equals(100, delfina.divertida())
+}
+
+test"delfina entiende jugar(pokemon)"{
+	
+	delfina.agarrar(play)
+	
+delfina.jugar(pokemon)
+assert.equals(100, delfina.divertida())
+}
+
+test"delfina entienda el mensaje diversion() que indica su nivel de diversión"{
+	
+	delfina.agarrar(play)
+	delfina.jugar(mario)
+	
+	assert.equals(100,delfina.diversion())
+	
+}
+
+//En visual no ejecuta bien.
